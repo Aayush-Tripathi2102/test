@@ -1,10 +1,20 @@
-import Image from "next/image";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Features from "@/components/Features";
+import Footer from "@/components/Footer";
 
-export default function Home() {
+export default function Page() {
+  const showHero = true;
+
   return (
-    <>
-      <h1 className="text-3xl">New Page</h1>
-      <p className="text-lg text-red-500">This is a simple new page.</p>
-    </>
+    <main className="flex flex-col">
+      <Navbar />
+
+      {showHero && <Hero />}
+
+      <Features />
+
+      <Footer />
+    </main>
   );
 }
